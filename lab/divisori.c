@@ -1,8 +1,8 @@
 /* 1.4 DIVISORI */
 
 /* Scrivere un programma che acquisiti tre interi x, y e n, calcola e visualizza il numero di interi compresi nell'intervallo [x,y] divisibili per n. 
-Nell'acquisizione il programma deve verificare che i tre interi siano tutti strettamente positivi e se così non e' richiede il 
-solo valore che non rispetta questo vincolo. Si ipotizzi invece che senz'altro x < y (ovvero non è una condizione da verificare). 
+Nell'acquisizione il programma deve verificare che i tre interi siano tutti strettamente positivi e se così non e' richiede il solo valore che non rispetta questo vincolo.
+Si ipotizzi invece che senz'altro x < y (ovvero non è una condizione da verificare). 
 Per esempio, se l'utente inserisce i valori 1 10 2 il programma visualizza 5 (corrispondenti a 2, 4, 6, 8 e 10). */
 
 #include <stdio.h>
