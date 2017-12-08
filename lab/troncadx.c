@@ -1,6 +1,11 @@
 /* 1.5 TRONCABILE PRIMO A DESTRA */
 
-/* Scrivere un programma che acquisisce un valore intero strettamente positivo, e finché non è tale lo richiede. Il programma analizza il valore intero e visualizza 1 nel caso sia un troncabile primo a destra, 0 altrimenti. Un numero si dice troncabile primo a destra se il numero stesso e tutti i numeri che si ottengono eliminando una alla volta la cifra meno significativa del numero analizzato al passo precedente, sono numeri primi. Per esempio, se il numero iniziale è 719, i numeri che si ottengono "eliminando una alla volta la cifra meno significativa del numero analizzato al passo precedente ..." sono 71 e 7. */
+/* Scrivere un programma che acquisisce un valore intero strettamente positivo, e finché non è tale lo richiede. 
+Il programma analizza il valore intero e visualizza 1 nel caso sia un troncabile primo a destra, 0 altrimenti. 
+Un numero si dice troncabile primo a destra se il numero stesso e tutti i numeri che si ottengono eliminando una alla volta 
+la cifra meno significativa del numero analizzato al passo precedente, sono numeri primi. Per esempio, se il numero iniziale 
+è 719, i numeri che si ottengono "eliminando una alla volta la cifra meno significativa del numero analizzato al passo 
+precedente ..." sono 71 e 7. */
 
 #include <stdio.h>
 #define BASE 10
