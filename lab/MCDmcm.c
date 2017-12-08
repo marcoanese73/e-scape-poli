@@ -1,6 +1,7 @@
 /* 1.5 MINIMO COMUNE MULTIPLO E MASSIMO COMUNE DIVISORE */
 
-/* Scrivere un programma che riceve in ingresso due numeri interi a e b e calcola e visualizza sia massimo comune divisore (MCD) e sia minimo comune multiplo (mcm), ognuno seguito dal carattere a capo '\n'. */
+/* Scrivere un programma che riceve in ingresso due numeri interi a e b e calcola e visualizza 
+sia massimo comune divisore (MCD)e sia minimo comune multiplo (mcm), ognuno seguito dal carattere a capo '\n'. */
 
 #include <stdio.h>
 
