@@ -1,8 +1,7 @@
 /* 1.2 PADDING */
 
-/* Si vuole rappresentare a video un valore naturale num utilizzando un numero a scelta di cifre k inserendo 0 nelle posizioni
-più significative, fino a raggiungere la dimensione desiderata. Nel caso in cui l'utente inserisca un numero di cifre k minore
-di quelle che costituiscono il numero num il programma visualizza il valore num così come e'. 
+/* Si vuole rappresentare a video un valore naturale num utilizzando un numero a scelta di cifre k inserendo 0 nelle posizioni più significative, fino a raggiungere la dimensione desiderata.
+Nel caso in cui l'utente inserisca un numero di cifre k minore di quelle che costituiscono il numero num il programma visualizza il valore num così come e'. 
 Per esempio, volendo rappresentare 842 su 5 cifre, si ottiene 00842. */
 
 #include <stdio.h>
