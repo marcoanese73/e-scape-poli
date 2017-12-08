@@ -1,7 +1,6 @@
 /* 1.3 TRIANGOLO */
 
-/* Il programma riceve in ingresso un numero intero n. Stampare un triangolo rettangolo isoscele fatto di asterischi 
-(cioe di caratteri *), la cui lunghezza di un lato sia pari a n. */
+/* Il programma riceve in ingresso un numero intero n. Stampare un triangolo rettangolo isoscele fatto di asterischi (cioe di caratteri *), la cui lunghezza di un lato sia pari a n. */
 
 #include <stdio.h>
 #define PUNTO '*'
