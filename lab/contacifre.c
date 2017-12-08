@@ -1,6 +1,7 @@
 /* 1.1 NUMERO DI CIFRE */
 
-/* Scrivere un programma che chiede all'utente di inserire un numero strettamente positivo (e finche' non e' tale lo richiede) e visualizza il numero di cifre che lo costituiscono. Ad esempio, se l'utente inserisce 7362, il programma visualizza 4. */
+/* Scrivere un programma che chiede all'utente di inserire un numero strettamente positivo (e finche' non e' tale lo richiede)
+e visualizza il numero di cifre che lo costituiscono. Ad esempio, se l'utente inserisce 7362, il programma visualizza 4. */
 
 #include <stdio.h>
 #define BASE 10
