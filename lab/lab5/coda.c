@@ -53,7 +53,6 @@ int main(int argc, char * argv[])
 			printf("> %s %s\n", first.nome, first.descrizione);
 		print(&my_coda);
 	}
-	
 
 	return 0;
 }
