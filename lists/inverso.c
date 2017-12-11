@@ -1,4 +1,5 @@
-/* Scrivere un programma C che chiede all'utente una sequenza di valori interni che termina con 2017. Il programma visualizza in ordine inverso i dati acquisiti. */
+/* Scrivere un programma C che chiede all'utente una sequenza di valori interni che termina con 2017.
+Il programma visualizza in ordine inverso i dati acquisiti. */
 
 #include <stdio.h>
 #include <stdlib.h>
