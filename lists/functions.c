@@ -121,13 +121,12 @@ elem_t* delete(elem_t *head, int value)
 
 elem_t* getFirst(elem_t **head)
 {
-	elem_t *first, *local_head;
+	elem_t *first;
 
-	local_head = *head;
-	first = local_head;
+	first = *head;
+	if(*head)
+		*head = (*head) -> next;
 	first -> next = NULL;
-	if(local_head)
-		local_head = local_head -> next;
 
 	return first;
 }
