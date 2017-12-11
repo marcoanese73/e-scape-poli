@@ -1,4 +1,5 @@
-/* Scrivere un sottoprogramma che, ricevute due liste ordinate di numeri interi, ne restituisce una ordinata che contiene la fusione delle due liste di partenza. Al termine del sottoprogramma le due liste non serviranno piu'. */
+/* Scrivere un sottoprogramma che, ricevute due liste ordinate di numeri interi, ne restituisce una ordinata che contiene la fusione delle due liste di partenza.
+Al termine del sottoprogramma le due liste non serviranno piu'. */
 
 #include <stdio.h>
 #include <stdlib.h>
