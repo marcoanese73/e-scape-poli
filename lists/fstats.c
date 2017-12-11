@@ -1,4 +1,6 @@
-/* Scrivere un programma che conta e visualizza il numero di volte che i caratteri del file "info.txt" campaiono nel file. Li visualizza nell'ordine in cui compaiono come "carattere occorrenze". Se, per esempio, il file contiene "Testo di prova, funziona?" il programma visualizza T 1 e 1 s 1 t 1 o 3   3 d 1 ... */
+/* Scrivere un programma che conta e visualizza il numero di volte che i caratteri del file "info.txt" campaiono nel file.
+Li visualizza nell'ordine in cui compaiono come "carattere occorrenze".
+Se, per esempio, il file contiene "Testo di prova, funziona?" il programma visualizza T 1 e 1 s 1 t 1 o 3   3 d 1 ... */
 
 #include <stdio.h>
 #include <stdlib.h>
