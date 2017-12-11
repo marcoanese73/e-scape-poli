@@ -1,3 +1,5 @@
+/* Versione per Linux */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
