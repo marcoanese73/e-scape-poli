@@ -1,0 +1,5 @@
+# ignora eseguibili (filechain)
+setup
+
+# ignora cartelle setup (filechain)
+simulation/
