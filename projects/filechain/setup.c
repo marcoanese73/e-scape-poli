@@ -1,3 +1,7 @@
+/* SETUP file:
+ * Crea cartelle di simulazione e i relativi registri (ledger.ldg e status.ldg) per ogni cartella di simulazione
+ */
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
