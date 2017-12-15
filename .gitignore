@@ -1,5 +1,5 @@
 # ignora eseguibili (filechain)
-setup
+projects/filechain/setup
 
 # ignora cartelle setup (filechain)
-simulation/
+projects/filechain/simulation/
