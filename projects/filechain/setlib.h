@@ -10,6 +10,7 @@
 /* Functions prototypes */
 
 void initSetup(int*);
+void createReadme(char[], int*);
 void printDate(FILE*);
 void createDir(char[]);
 void createLedger(char[], int*);
@@ -27,6 +28,26 @@ void initSetup(int *errors)
 	usleep(SLEEP);
 
 	return;
+}
+
+/* Create a readme file */
+
+void createReadme(char file_name[], int *errors)
+{
+	FILE *fp;
+
+	if(fp = fopen(file_name, "w")) {
+		printf("Creato file %s " ANSI_COLOR_GREEN "OK" ANSI_COLOR_RESET "\n", file_name);
+		fprintf(fp, "Tutorial\n\n(Ancora da scrivere...)\n");
+		fclose(fp);
+	} else {
+		printf("Errore nella creazione del file %s " ANSI_COLOR_RED "ERROR" ANSI_COLOR_RESET "\n", file_name);
+		(*errors)++;
+	}
+	usleep(SLEEP);
+
+	return;
+
 }
 
 /* Write on file current date */
