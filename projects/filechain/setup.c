@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include "./setlib.h"
 
+#define README_FILE_NAME   "./simulation/readme.txt"
 #define LEDGER_FILE_NAME   "./simulation/ledger.ldg"
 #define LEDGER_DIR_NAME    "./simulation/"
 #define MATRIX_DIR_NAME    "./simulation/matrix/"
@@ -37,6 +38,7 @@ int main(int argc, char *argv[])
 
 	initSetup(&errors);
 
+	createReadme(README_FILE_NAME, &errors);
 	createDir(LEDGER_DIR_NAME);
 	createLedger(LEDGER_FILE_NAME, &errors);
 	createDir(MATRIX_DIR_NAME);
