@@ -38,8 +38,8 @@ int main(int argc, char *argv[])
 
 	initSetup(&errors);
 
-	createReadme(README_FILE_NAME, &errors);
 	createDir(LEDGER_DIR_NAME);
+	createReadme(README_FILE_NAME, &errors);
 	createLedger(LEDGER_FILE_NAME, &errors);
 	createDir(MATRIX_DIR_NAME);
 	createDir(NODE_1_DIR_NAME);
