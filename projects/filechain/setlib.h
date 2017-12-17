@@ -154,16 +154,12 @@ void createSim(char file_name[], int *errors)
 {
 	FILE *fp, *fprint;
 	char word[500];
-	int i, space;
 
 	if(fp = fopen(file_name, "w")) {
 		printf("Creato file %s " ANSI_COLOR_GREEN "OK" ANSI_COLOR_RESET "\n", file_name);
 		if(fprint = fopen(PRINTABLE_NAME, "r")) {
 			fscanf(fprint, "%s", word);
 			while(!feof(fprint)) {
-				for(space = 0, i = 0; word[i] != '\0'; i++)
-					if(word[i] == ' ')
-						space = 1;
 				if(word[0] == '\\' && word[1] == 's')
 					fprintf(fp, "%c", ' ');
 				else if(word[0] == '\\' && word[1] == 'n')
