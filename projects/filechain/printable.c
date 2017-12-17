@@ -38,15 +38,17 @@ int main(int argc, char *argv[])
 			fscanf(fin, "%c", &this_car);
 			while(!feof(fin)) {
 				switch(this_car) {
-				case '"' : fprintf(fout, "\\\"");
+				case '"' : fprintf(fout, " \\\" ");
 					   break;
-				case '\\': fprintf(fout, "\\\\");
+				case '\\': fprintf(fout, " \\\\ ");
 					   break;
-				case '\n': fprintf(fout, "\\n");
+				case '\n': fprintf(fout, " \\n ");
 					   break;
-				case '%': fprintf(fout, "%%%%");
+				case '%': fprintf(fout, " %%%% ");
 					   break;
-				case '\t': fprintf(fout, "\\t");
+				case '\t': fprintf(fout, " \\t ");
+					   break;
+				case ' ' : fprintf(fout, " \\s ");
 					   break;
 				default  : fprintf(fout, "%c", this_car);
 					   break;
