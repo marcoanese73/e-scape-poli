@@ -5,6 +5,7 @@
 #define ANSI_COLOR_RED	 "\x1b[31m"
 #define ANSI_COLOR_GREEN "\x1b[32m"
 #define ANSI_COLOR_RESET "\x1b[0m"
+#define STRING_STOP_FILE "stop"
 #define SLEEP 9000
 
 /* Functions prototypes */
@@ -38,7 +39,12 @@ void createReadme(char file_name[], int *errors)
 
 	if(fp = fopen(file_name, "w")) {
 		printf("Creato file %s " ANSI_COLOR_GREEN "OK" ANSI_COLOR_RESET "\n", file_name);
-		fprintf(fp, "Tutorial\n\n(Ancora da scrivere...)\n");
+		fprintf(fp, "TUTORIAL\n\n
+1)Individua il percorso del file che vuoi venga salvato con filechain\n
+2)Usa il comando 'filechain -s <nome-file.txt>' per memorizzarlo nella filechain simulata (cartelle dentro 'simulation')\n
+2)Inserisci il nome con cui vuoi memorizzarlo (vuoto per il nome attuale) e premi INVIO\n
+3)Riapri il tuo file utilizzando il comando 'filechain -o <nome-file.txt>'\n
+\n");
 		fclose(fp);
 	} else {
 		printf("Errore nella creazione del file %s " ANSI_COLOR_RED "ERROR" ANSI_COLOR_RESET "\n", file_name);
