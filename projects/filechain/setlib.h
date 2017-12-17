@@ -5,6 +5,7 @@
 #define ANSI_COLOR_RED	 "\x1b[31m"
 #define ANSI_COLOR_GREEN "\x1b[32m"
 #define ANSI_COLOR_RESET "\x1b[0m"
+#define PRINTABLE_NAME "./printable.txt"
 #define SLEEP 9000
 
 /* Functions prototypes */
@@ -151,16 +152,40 @@ void scanStatus(char file_name[], int *errors)
 
 void createSim(char file_name[], int *errors)
 {
-	FILE *fp;
+	FILE *fp, *fprint;
+	char word[500];
+	int i, space;
 
 	if(fp = fopen(file_name, "w")) {
 		printf("Creato file %s " ANSI_COLOR_GREEN "OK" ANSI_COLOR_RESET "\n", file_name);
-		fprintf(fp, "#include <stdio.h>\n\n");
-		fprintf(fp, "int main(int argc, char *argv[])\n{\n");
-		fprintf(fp, "\tprintf(\"Stampa di prova\\n\");\n");
-		fprintf(fp, "\treturn 0;\n}\n");
-		fclose(fp);
-	} else {
+		if(fprint = fopen(PRINTABLE_NAME, "r")) {
+			fscanf(fprint, "%s", word);
+			while(!feof(fprint)) {
+				for(space = 0, i = 0; word[i] != '\0'; i++)
+					if(word[i] == ' ')
+						space = 1;
+				if(word[0] == '\\' && word[1] == 's')
+					fprintf(fp, "%c", ' ');
+				else if(word[0] == '\\' && word[1] == 'n')
+					fprintf(fp, "\n");
+				else if(word[0] == '\\' && word[1] == 't')
+					fprintf(fp, "\t");
+				else if(word[0] == '\\' && word[1] == '\\')
+					fprintf(fp, "\\");
+				else if(word[0] == '\\' && word[1] == '"')
+					fprintf(fp, "\"");
+				else if(word[0] == '%' && word[1] == '%')
+					fprintf(fp, "%%");
+				else
+					fprintf(fp, "%s", word);
+				fscanf(fprint, "%s", word);
+			}
+			fclose(fp);
+		} else {
+			printf("Non ho trovato il file %s\n", PRINTABLE_NAME);
+			fprintf(fp, "/* Coming soon... */");
+			fclose(fp);
+	} } else {
 		printf("Errore nella creazione del file %s " ANSI_COLOR_RED "ERROR" ANSI_COLOR_RESET "\n", file_name);
 		(*errors)++;
 	}
