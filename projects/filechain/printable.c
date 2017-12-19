@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 #define MAXLEN 500
-#define OUTPUT_NAME "./printable.txt"
+#define OUTPUT_NAME "./download/printable.txt"
 #define ANSI_COLOR_YELLOW "\x1b[33m"
 #define ANSI_COLOR_RESET  "\x1b[0m"
 
