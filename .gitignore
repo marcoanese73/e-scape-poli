@@ -1,9 +1,6 @@
 # ignora eseguibili (filechain)
-projects/filechain/setup
+projects/filechain/download/setup
 projects/filechain/printable
 
 # ignora cartelle setup (filechain)
-projects/filechain/simulation/
-
-# ignora file setup (filechain)
-projects/filechain/printable.txt
+projects/filechain/download/simulation/
