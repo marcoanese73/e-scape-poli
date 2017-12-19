@@ -29,7 +29,7 @@ elem_t* push(elem_t *head, int value)
 {
 	elem_t *nuovo;
 
-	if(nuovo = (elem_t *)malloc(sizeof(elem_t))) {
+	if(nuovo = (elem_t*)malloc(sizeof(elem_t))) {
 		nuovo -> info = value;
 		nuovo -> next = head;
 		head = nuovo;
@@ -45,7 +45,7 @@ elem_t* append(elem_t *head, int value)
 {
 	elem_t *nuovo, *p;
 
-	if(nuovo = (elem_t *)malloc(sizeof(elem_t))) {
+	if(nuovo = (elem_t*)malloc(sizeof(elem_t))) {
 		nuovo -> info = value;
 		nuovo -> next = NULL;
 		if(head) {
@@ -66,7 +66,7 @@ elem_t* insertSorted(elem_t *head, int value)
 {
 	elem_t *nuovo, *p;
 
-	if(nuovo = (elem_t *)malloc(sizeof(elem_t *))) {
+	if(nuovo = (elem_t*)malloc(sizeof(elem_t))) {
 		nuovo -> info = value;
 		if(head) {
 			if(head -> info > value) {
