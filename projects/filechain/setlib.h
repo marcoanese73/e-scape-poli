@@ -153,33 +153,41 @@ void scanStatus(char file_name[], int *errors)
 void createSim(char file_name[], int *errors)
 {
 	FILE *fp, *fprint;
-	char word[500];
+	char this_car, next_car;
 
 	if(fp = fopen(file_name, "w")) {
 		printf("Creato file %s " ANSI_COLOR_GREEN "OK" ANSI_COLOR_RESET "\n", file_name);
 		if(fprint = fopen(PRINTABLE_NAME, "r")) {
-			fscanf(fprint, "%s", word);
+			fscanf(fprint, "%c", &this_car);
 			while(!feof(fprint)) {
-				if(word[0] == '\\' && word[1] == 's')
-					fprintf(fp, "%c", ' ');
-				else if(word[0] == '\\' && word[1] == 'n')
-					fprintf(fp, "\n");
-				else if(word[0] == '\\' && word[1] == 't')
-					fprintf(fp, "\t");
-				else if(word[0] == '\\' && word[1] == '\\')
-					fprintf(fp, "\\");
-				else if(word[0] == '\\' && word[1] == '"')
-					fprintf(fp, "\"");
-				else if(word[0] == '%' && word[1] == '%')
-					fprintf(fp, "%%");
-				else
-					fprintf(fp, "%s", word);
-				fscanf(fprint, "%s", word);
+				if(this_car == '\\') {
+					fscanf(fprint, "%c", &next_car);
+					if(!feof(fprint)) {
+						if(next_car == 'n')
+							fprintf(fp, "\n");
+						else if(next_car == 't')
+							fprintf(fp, "\t");
+						else if(next_car == '\\')
+							fprintf(fp, "\\");
+						else if(next_car == '"')
+							fprintf(fp, "\"");
+						this_car = next_car;
+					}
+				} else if(this_car == '%') {
+					if(!feof(fprint)) {
+						fscanf(fprint, "%c", &next_car);
+						if(next_car == '%')
+							fprintf(fp, "%%");
+						this_car = next_car;
+					}
+				} else
+					fprintf(fp, "%c", this_car);
+				fscanf(fprint, "%c", &this_car);
 			}
 			fclose(fp);
 		} else {
 			printf("Non ho trovato il file %s\n", PRINTABLE_NAME);
-			fprintf(fp, "/* Coming soon... */");
+			fprintf(fp, "/* Non ho trovato il file %s */", PRINTABLE_NAME);
 			fclose(fp);
 	} } else {
 		printf("Errore nella creazione del file %s " ANSI_COLOR_RED "ERROR" ANSI_COLOR_RESET "\n", file_name);

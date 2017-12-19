@@ -1,7 +1,7 @@
 /* ================================================= *
- * PRINTABLE:--------------------------------------- *
- * Creates a printable version of a C file!----------*
- * Cool, huh?--------------------------------------- *
+ * PRINTABLE: -------------------------------------- *
+ * Creates a printable version of a C file! -------- *
+ * Cool, huh? -------------------------------------- *
  * ================================================= */
 
 #include <stdio.h>
@@ -17,11 +17,13 @@ int main(int argc, char *argv[])
 	FILE *fin, *fout;
 	int i, name_len, found;
 
-	printf("Inserire il nome del file da convertire, comprensivo di percorso\nSono consentiti al piu' %d caratteri: ", MAXLEN);
-	scanf("%s", file_name);
-
+	if(argc > 1)
+		strcpy(file_name, argv[1]);
+	else {
+		printf("Inserire il nome del file da convertire (al piu' %d caratteri): ", MAXLEN);
+		scanf("%s", file_name);
+	}
 	name_len = strlen(file_name);
-
 	for(i = name_len, found = 0; !found && file_name[i] != '.'; i--)
 		if(file_name[i] == '/') {
 			file_name[name_len] = '.';
@@ -38,17 +40,15 @@ int main(int argc, char *argv[])
 			fscanf(fin, "%c", &this_car);
 			while(!feof(fin)) {
 				switch(this_car) {
-				case '"' : fprintf(fout, " \\\" ");
+				case '"' : fprintf(fout, "\\\"");
 					   break;
-				case '\\': fprintf(fout, " \\\\ ");
+				case '\\': fprintf(fout, "\\\\");
 					   break;
-				case '\n': fprintf(fout, " \\n ");
+				case '\n': fprintf(fout, "\\n");
 					   break;
-				case '%': fprintf(fout, " %%%% ");
+				case '%' : fprintf(fout, "%%%%");
 					   break;
-				case '\t': fprintf(fout, " \\t ");
-					   break;
-				case ' ' : fprintf(fout, " \\s ");
+				case '\t': fprintf(fout, "\\t");
 					   break;
 				default  : fprintf(fout, "%c", this_car);
 					   break;

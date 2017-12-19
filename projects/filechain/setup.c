@@ -1,6 +1,6 @@
 /* ================================================= *
- * SETUP file:-------------------------------------- *
- * Creates folders for simulation (nodes)----------- *
+ * SETUP file: ------------------------------------- *
+ * Creates folders for simulation (nodes) ---------- *
  * and related registers (ledger.ldg and status.bin) *
  * ================================================= */
 
