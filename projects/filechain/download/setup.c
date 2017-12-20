@@ -116,7 +116,7 @@ void createReadme(char file_name[], int *errors)
 		fprintf(fp, "GUIDA PER LA SIMULAZIONE\n\n");
 		fprintf(fp, "\t1) Apri la cartella simulation/ e poi matrix/\n");
 		fprintf(fp, "\t2) Accedi alla directory di un nodo qualsiasi\n");
-		fprintf(fp, "\t3) Per ogni nodo su cui non hai mai lavorato, apri il terminale e digita il comando ");
+		fprintf(fp, "\t3) Per ogni nodo, apri il terminale e digita il comando ");
 		fprintf(fp, "\"gcc -o filechain filechain.c\"\n");
 		fprintf(fp, "\t4) Una volta che l'eseguibile e' stato creato, apri il terminale e digita \"./filechain\"\n");
 		fprintf(fp, "\t5) Puoi iniziare la simulazione, utilizzando i comandi descritti in seguito\n\n");
