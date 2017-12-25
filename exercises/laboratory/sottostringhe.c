@@ -28,5 +28,6 @@ int main(int argc, char * argv[])
 		}
 	}
 	printf("%d\n", conta);
+	
 	return 0;
 }

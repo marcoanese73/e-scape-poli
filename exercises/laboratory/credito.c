@@ -34,7 +34,4 @@ int main(int argc, char * argv[])
 	printf("%d\n", valida);
 
 	return 0;
-
-
-
 }
