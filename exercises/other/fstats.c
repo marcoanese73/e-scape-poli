@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define FNAME "./info.txt"
+#define FNAME "./files/info.txt"
 
 typedef struct _elem {
 	char info;
