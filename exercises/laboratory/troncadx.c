@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define BASE 10
 
 int primality(int);

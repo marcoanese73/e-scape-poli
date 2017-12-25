@@ -1,7 +1,6 @@
-/* Scrivere un sottoprogramma che, ricevuta una lista, restituisce la lista in modo tale che tutti gli elementi adiacenti siano ridotti ad un solo elemento. Scrivere la definizione del tipo di dato opportuno. */
-
 #include <stdio.h>
 #include <stdlib.h>
+
 #define STOP 999
 
 typedef struct _elem {

@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define BASE 2
 #define POT 10
 #define STOP 0

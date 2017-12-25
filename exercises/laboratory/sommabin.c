@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define N 8
 
 int somma(int[], int[], int[], int);

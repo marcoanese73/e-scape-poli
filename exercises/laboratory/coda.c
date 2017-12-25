@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 #define N 3
 #define L 30
 #define CONT 4

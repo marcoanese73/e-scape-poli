@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define N 200
 
 int main(int argc, char * argv[])

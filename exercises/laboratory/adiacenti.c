@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define STOP 0
 
 int main(int argc, char * argv[])

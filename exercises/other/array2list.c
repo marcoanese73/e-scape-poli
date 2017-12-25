@@ -1,7 +1,6 @@
-/* Scrivere un sottoprogramma che riceve in ingresso un array di valori interi e qualsiasi altro parametro ritenuto strettamente necessario, e restituisce una lista contenente tutti i e soli i valori dell'array minori o uguali della media. */
-
 #include <stdio.h>
 #include <stdlib.h>
+
 #define N 10
 
 typedef struct _elem {

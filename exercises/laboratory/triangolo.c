@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define PUNTO '*'
 
 int main(int argc, char *argv[])

@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define N 10
 
 int tuttiuguali(int[], int, int);
