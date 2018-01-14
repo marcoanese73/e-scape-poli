@@ -1,39 +1,28 @@
 #include <stdio.h>
+#include <string.h>
+#define LEN 500
 
-#define N 10
-
-typedef struct o {
-		char car;
-		int n;
-	} occ_t;
-
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
-	char str[N];
-	occ_t v[N];
-	int i, j, trovato, nc;
+	char str[LEN+1];
+	int len, conta;
+	int i;
 
-	for(i = 0; i < N; i++)
-		scanf("%c", &str[i]);
+	gets(str);
 
-	nc = 0;
+	len = strlen(str);
 
-	for(i = 0; i < N; i++) {
-		trovato = 0;
-		for(j = 0; j < nc && !trovato; j++)
-			if(v[j].car == str[i])
-				trovato = 1;
-			if (trovato)
-				v[j-1].n++;
-			else {
-				v[nc].car = str[i];
-				v[nc].n = 1;
-				nc++;
-			}
+	for(i = len-1, conta = 1; i > 0; i--) {
+		if(str[i-1] == str[i])
+			conta++;
+		else {
+			printf("%c%d", str[i], conta);
+			conta = 1;
+		}
 	}
 
-	for(i = 0; i < nc; i++)
-		printf("%c%d", v[i].car, v[i].n);
+	if(len > 0)
+		printf("%c%d", str[i], conta);
 
 	printf("\n");
 
