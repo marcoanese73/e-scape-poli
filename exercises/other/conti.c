@@ -1,3 +1,18 @@
+
+/* Un file contiene un certo numero di righe, il cui numero non è noto a priori.
+Ogni riga è strutturata nel seguente modo:
+importo (espresso in euro);nominativo (sequenza di al più 30 caratteri)
+che corrisponde alla spesa effettuata dal nominativo indicato.
+Il file contiene l'insieme delle spese sostenute da un gruppo di personedurante un viaggio.
+Al termine del viaggio, a fronte delle spese complessive fatte,
+si vuole sapere per ogni nominativo, in base a quanto ha già speso, quanti soldi deve 
+ricevere/dare in modo tale che il totale speso venga diviso tra i partecipanti.
+Il numero dei partecipanti non è noto a priori ma va dedotto dal numero dei diversi nominativi
+presenti nel file.
+Scrivere un programma che chiede all'utente il nome del file contenente le informazioni 
+(al più 120 caratteri) e calcola e visualizza per ogni nominativo la cifra che deve ricevere
+(preceduta da un carattere '+') o che deve dare (preceduta da un carattere '-').
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
